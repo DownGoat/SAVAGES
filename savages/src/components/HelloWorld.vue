@@ -4,131 +4,265 @@
     
     <div class="row headers">
       <div class="col-md-6 text-left">Stat</div>
-      <div class="col-md-1 text-left">Feats</div>
+      <div class="col-md-1 text-left">Attributes</div>
       <div class="col-md-1 text-left">Points</div>
     </div>
 
-    <div class="row" id="strength">
+    <div class="row feat" id="strength">
       <div class="label col-md-6 text-left">Strength:</div>
       <div class="feats col-md-1 text-left">{{strength}} (+{{strengthGear}})</div>
       <div class="points col-md-1 text-left">{{strengthPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeStrength(false)">-</button>
-        {{strengthCost()}}
-        <button v-on:click="changeStrength(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeStrength(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{strengthCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeStrength(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row" id="agility">
+    <div class="row feat" id="agility">
       <div class="label col-md-6 text-left">Agility:</div>
       <div class="feats col-md-1 text-left">{{agility}} (+{{agilityGear}})</div>
       <div class="points col-md-1 text-left">{{agilityPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeAgility(false)">-</button>
-        {{agilityCost()}}
-        <button v-on:click="changeAgility(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeAgility(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{agilityCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeAgility(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row" id="vitality">
+    <div class="row feat" id="vitality">
       <div class="label col-md-6 text-left">Vitality:</div>
       <div class="feats col-md-1 text-left">{{vitality}} (+{{vitalityGear}})</div>
       <div class="points col-md-1 text-left">{{vitalityPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeVitality(false)">-</button>
-        {{vitalityCost()}}
-        <button v-on:click="changeVitality(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeVitality(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{vitalityCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeVitality(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row" id="accuracy">
+    <div class="row feat" id="accuracy">
       <div class="label col-md-6 text-left">Accuracy:</div>
       <div class="feats col-md-1 text-left">{{accuracy}} (+{{accuracyGear}})</div>
       <div class="points col-md-1 text-left">{{accuracyPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeAccuracy(false)">-</button>
-        {{accuracyCost()}}
-        <button v-on:click="changeAccuracy(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeAccuracy(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{accuracyCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeAccuracy(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row" id="grit">
+    <div class="row feat" id="grit">
       <div class="label col-md-6 text-left">Grit:</div>
       <div class="feats col-md-1 text-left">{{grit}} (+{{gritGear}})</div>
       <div class="points col-md-1 text-left">{{gritPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeGrit(false)">-</button>
-        {{gritCost()}}
-        <button v-on:click="changeGrit(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeGrit(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{gritCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeGrit(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row" id="encumberance">
+    <div class="row feat" id="encumberance">
       <div class="label col-md-6 text-left">Encumberance:</div>
       <div class="feats col-md-1 text-left">{{encumberance}} (+{{encumberanceGear}})</div>
       <div class="points col-md-1 text-left">{{encumberancePoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeEncumberance(false)">-</button>
-        {{encumberanceCost()}}
-        <button v-on:click="changeEncumberance(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeEncumberance(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{encumberanceCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeEncumberance(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row" id="survival">
+    <div class="row feat" id="survival">
       <div class="label col-md-6 text-left">Survival:</div>
       <div class="feats col-md-1 text-left">{{survival}} (+{{survivalGear}})</div>
       <div class="points col-md-1 text-left">{{survivalPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeSurvival(false)">-</button>
-        {{survivalCost()}}
-        <button v-on:click="changeSurvival(true)">+</button>
+        <div class="row">
+          <div class="col-md-9"></div>
+          <div class="col-md-1">
+            <button v-on:click="changeSurvival(false)">-</button>
+          </div>
+          <div class="col-md-1">
+            {{survivalCost()}}
+          </div>
+          <div class="col-md-1">
+            <button v-on:click="changeSurvival(true)">+</button>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="row stats">
-      <div class="col-md-7">
+      <div class="col-md-8">
         <div class="row">
           <div class="col-12"><p>Computed stats</p></div>
         </div>
         <div class="row meele">
-          <div class="col-md-4 text-left">Base meele damage: 40</div>
-          <div class="col-md-4 text-left">From strength: {{strengthDamage()}} ({{strengthPercentage()}}%) </div>
-          <div class="col-md-4 text-left">Total: {{strengthDamage() + 40}}</div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 text-left">Base meele damage</div>
+              <div class="col-md-3 text-left">From strength</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">Total</div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 text-left"><input class="base-input" type="number" v-model="baseMelee" min="0"></div>
+              <div class="col-md-3 text-left">{{strengthDamage()}} ({{strengthPercentage()}}%) </div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">{{strengthDamage() + Number(baseMelee)}}</div>
+            </div>
+          </div>
         </div>
+
 
         <div class="row ranged">
-          <div class="col-md-4 text-left">Base ranged damage: 40</div>
-          <div class="col-md-4 text-left">From accuracy: {{accuracyDamage()}} ({{accuracyPercentage()}}%) </div>
-          <div class="col-md-4 text-left">Total: {{accuracyDamage() + 40}}</div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 text-left">Base ranged damage</div>
+              <div class="col-md-3 text-left">From accuracy</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">Total</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 text-left"><input class="base-input" type="number" v-model="baseRanged" min="0"></div>
+              <div class="col-md-3 text-left">{{accuracyDamage()}} ({{accuracyPercentage()}}%)</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">{{accuracyDamage() + Number(baseRanged)}}</div>
+            </div>
+          </div>
         </div>
 
+        
         <div class="row armor">
-          <div class="col-md-4 text-left">From agility: {{(agility + Number(agilityGear)) * 2}}</div>
-          <div class="col-md-4 text-left">Damage Reduction: {{((agility + Number(agilityGear)) * 2) * 0.28}}%</div>
-          <div class="col-md-4 text-left">Total: {{(agility + Number(agilityGear)) * 2}}</div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 text-left">Base armor</div>
+              <div class="col-md-3 text-left">From agility</div>
+              <div class="col-md-3 text-left">Damage Reduction</div>
+              <div class="col-md-3 text-left">Total</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 text-left"><input class="base-input" type="number" v-model="baseArmor" min="0"></div>
+              <div class="col-md-3 text-left">{{(agility + Number(agilityGear)) * 2}}</div>
+              <div class="col-md-3 text-left">{{Number((((agility + Number(agilityGear)) * 2) + Number(baseArmor)) * 0.28).toFixed(2)}}%</div>
+              <div class="col-md-3 text-left">{{((agility + Number(agilityGear)) * 2) + Number(baseArmor)}}</div>
+            </div>
+          </div>
         </div>
 
+        
         <div class="row health">
-          <div class="col-md-4 text-left">Base health: 200</div>
-          <div class="col-md-4 text-left">From vitality: {{(vitality + Number(vitalityGear)) * 8}}</div>
-          <div class="col-md-4 text-left">Total: {{(vitality + Number(vitalityGear)) * 8 + 200}}</div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 text-left">Base health</div>
+              <div class="col-md-3 text-left">From vitality</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">Total</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 text-left"><input class="base-input" type="number" v-model="baseHealth" min="0"></div>
+              <div class="col-md-3 text-left">{{(vitality + Number(vitalityGear)) * 8}}</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">{{(vitality + Number(vitalityGear)) * 8 + Number(baseHealth)}}</div>
+            </div>
+          </div>
         </div>
+
 
         <div class="row stamina">
-          <div class="col-md-4 text-left">Base stamina: 100</div>
-          <div class="col-md-4 text-left">From grit: {{(grit + Number(gritGear)) * 3}} </div>
-          <div class="col-md-4 text-left">Total: {{(grit + Number(gritGear)) * 3 + 100}}</div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 text-left">Base stamina</div>
+              <div class="col-md-3 text-left">From grit</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">Total</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 text-left"><input class="base-input" type="number" v-model="baseStamina" min="0"></div>
+              <div class="col-md-3 text-left">{{(grit + Number(gritGear)) * 3}}</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">{{(grit + Number(gritGear)) * 3 + Number(baseStamina)}}</div>
+            </div>
+          </div>
         </div>
 
         <div class="row encumberance">
-          <div class="col-md-4 text-left">Base encumberance: 70</div>
-          <div class="col-md-4 text-left">From encumberance: {{(encumberance + Number(encumberanceGear)) * 7}}</div>
-          <div class="col-md-4 text-left">Total: {{(encumberance + Number(encumberanceGear)) * 7 + 70}}</div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3 text-left">Base encumberance</div>
+              <div class="col-md-3 text-left">From encumberance</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">Total</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 text-left"><input class="base-input" type="number" v-model="baseEncumberance" min="0"></div>
+              <div class="col-md-3 text-left">{{(encumberance + Number(encumberanceGear)) * 7}}</div>
+              <div class="col-md-3 text-left"></div>
+              <div class="col-md-3 text-left">{{(encumberance + Number(encumberanceGear)) * 7 + Number(baseEncumberance)}}</div>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <div class="col-md-5">
+      <div class="col-md-4">
         <div class="row">
           <div class="col-12 text-right"><p>Feats from gear, elixir, warpaint etc.</p></div>
         </div>
@@ -177,6 +311,13 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      baseMelee: 40,
+      baseRanged: 40,
+      baseArmor: 100,
+      baseHealth: 200,
+      baseStamina: 100,
+      baseEncumberance: 70,
+
       strength: 0,
       strengthPoints: 0,
       strengthGear: 0,
@@ -282,7 +423,12 @@ export default {
     },
 
     strengthDamage() {
-      return 40 * ((this.strength + Number(this.strengthGear)) * 2 / 100);
+      return Number(
+        Number(
+          Number(this.baseMelee) *
+            ((this.strength + Number(this.strengthGear)) * 2 / 100)
+        ).toFixed(0)
+      );
     },
 
     strengthPercentage() {
@@ -323,7 +469,11 @@ export default {
     },
 
     accuracyDamage() {
-      return 40 * ((this.accuracy + Number(this.accuracyGear)) * 2 / 100);
+      return Number(
+        Number(
+          40 * ((this.accuracy + Number(this.accuracyGear)) * 2 / 100)
+        ).toFixed(0)
+      );
     },
 
     accuracyPercentage() {
@@ -423,5 +573,13 @@ a {
 
 .stats {
   margin-top: 3em;
+}
+
+.base-input {
+  width: 5em;
+}
+
+.feat {
+  margin-bottom: 1em;
 }
 </style>
