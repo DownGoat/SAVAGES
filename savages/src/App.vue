@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img class="logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -17,12 +17,23 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #1e1e1e;
+}
+input {
+  background-color: #2e2e2e;
+  color: #cccccc;
+  border: 0;
+}
+.logo {
+  margin-bottom: 3em;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+  color: #cccccc;
 }
 </style>
