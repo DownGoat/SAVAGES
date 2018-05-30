@@ -13,9 +13,9 @@
       <div class="feats col-md-1 text-left">{{strength}} (+{{strengthGear}})</div>
       <div class="points col-md-1 text-left">{{strengthPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeStrength(true)">+</button>
-        {{strengthCost()}}
         <button v-on:click="changeStrength(false)">-</button>
+        {{strengthCost()}}
+        <button v-on:click="changeStrength(true)">+</button>
       </div>
     </div>
 
@@ -24,9 +24,9 @@
       <div class="feats col-md-1 text-left">{{agility}} (+{{agilityGear}})</div>
       <div class="points col-md-1 text-left">{{agilityPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeAgility(true)">+</button>
-        {{agilityCost()}}
         <button v-on:click="changeAgility(false)">-</button>
+        {{agilityCost()}}
+        <button v-on:click="changeAgility(true)">+</button>
       </div>
     </div>
 
@@ -35,9 +35,9 @@
       <div class="feats col-md-1 text-left">{{vitality}} (+{{vitalityGear}})</div>
       <div class="points col-md-1 text-left">{{vitalityPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeVitality(true)">+</button>
-        {{vitalityCost()}}
         <button v-on:click="changeVitality(false)">-</button>
+        {{vitalityCost()}}
+        <button v-on:click="changeVitality(true)">+</button>
       </div>
     </div>
 
@@ -46,9 +46,9 @@
       <div class="feats col-md-1 text-left">{{accuracy}} (+{{accuracyGear}})</div>
       <div class="points col-md-1 text-left">{{accuracyPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeAccuracy(true)">+</button>
-        {{accuracyCost()}}
         <button v-on:click="changeAccuracy(false)">-</button>
+        {{accuracyCost()}}
+        <button v-on:click="changeAccuracy(true)">+</button>
       </div>
     </div>
 
@@ -57,9 +57,9 @@
       <div class="feats col-md-1 text-left">{{grit}} (+{{gritGear}})</div>
       <div class="points col-md-1 text-left">{{gritPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeGrit(true)">+</button>
-        {{gritCost()}}
         <button v-on:click="changeGrit(false)">-</button>
+        {{gritCost()}}
+        <button v-on:click="changeGrit(true)">+</button>
       </div>
     </div>
 
@@ -68,9 +68,9 @@
       <div class="feats col-md-1 text-left">{{encumberance}} (+{{encumberanceGear}})</div>
       <div class="points col-md-1 text-left">{{encumberancePoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeEncumberance(true)">+</button>
-        {{encumberanceCost()}}
         <button v-on:click="changeEncumberance(false)">-</button>
+        {{encumberanceCost()}}
+        <button v-on:click="changeEncumberance(true)">+</button>
       </div>
     </div>
 
@@ -79,9 +79,9 @@
       <div class="feats col-md-1 text-left">{{survival}} (+{{survivalGear}})</div>
       <div class="points col-md-1 text-left">{{survivalPoints}}</div>
       <div class="point-buttons col-md-4 text-right">
-        <button v-on:click="changeSurvival(true)">+</button>
-        {{survivalCost()}}
         <button v-on:click="changeSurvival(false)">-</button>
+        {{survivalCost()}}
+        <button v-on:click="changeSurvival(true)">+</button>
       </div>
     </div>
 
@@ -271,14 +271,18 @@ export default {
     },
 
     changeStrength: function(increment) {
-      var newValues = this.pointCalculation(increment, this.strength, Number(this.strengthGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.strength,
+        Number(this.strengthGear)
+      );
       this.strength = newValues.feat;
       this.points = newValues.points;
       this.strengthPoints = newValues.spentPoints;
     },
 
     strengthDamage() {
-      return 40 * (((this.strength + Number(this.strengthGear)) * 2) / 100);
+      return 40 * ((this.strength + Number(this.strengthGear)) * 2 / 100);
     },
 
     strengthPercentage() {
@@ -286,28 +290,40 @@ export default {
     },
 
     changeAgility: function(increment) {
-      var newValues = this.pointCalculation(increment, this.agility, Number(this.agilityGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.agility,
+        Number(this.agilityGear)
+      );
       this.agility = newValues.feat;
       this.points = newValues.points;
       this.agilityPoints = newValues.spentPoints;
     },
 
     changeVitality: function(increment) {
-      var newValues = this.pointCalculation(increment, this.vitality, Number(this.vitalityGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.vitality,
+        Number(this.vitalityGear)
+      );
       this.vitality = newValues.feat;
       this.points = newValues.points;
       this.vitalityPoints = newValues.spentPoints;
     },
 
     changeAccuracy: function(increment) {
-      var newValues = this.pointCalculation(increment, this.accuracy, Number(this.agilityGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.accuracy,
+        Number(this.agilityGear)
+      );
       this.accuracy = newValues.feat;
       this.points = newValues.points;
       this.accuracyPoints = newValues.spentPoints;
     },
 
     accuracyDamage() {
-      return 40 * (((this.accuracy + Number(this.accuracyGear)) * 2) / 100);
+      return 40 * ((this.accuracy + Number(this.accuracyGear)) * 2 / 100);
     },
 
     accuracyPercentage() {
@@ -315,21 +331,33 @@ export default {
     },
 
     changeGrit: function(increment) {
-      var newValues = this.pointCalculation(increment, this.grit, Number(this.gritGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.grit,
+        Number(this.gritGear)
+      );
       this.grit = newValues.feat;
       this.points = newValues.points;
       this.gritPoints = newValues.spentPoints;
     },
 
     changeEncumberance: function(increment) {
-      var newValues = this.pointCalculation(increment, this.encumberance, Number(this.encumberanceGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.encumberance,
+        Number(this.encumberanceGear)
+      );
       this.encumberance = newValues.feat;
       this.points = newValues.points;
       this.encumberancePoints = newValues.spentPoints;
     },
 
     changeSurvival: function(increment) {
-      var newValues = this.pointCalculation(increment, this.survival, Number(this.survivalGear));
+      var newValues = this.pointCalculation(
+        increment,
+        this.survival,
+        Number(this.survivalGear)
+      );
       this.survival = newValues.feat;
       this.points = newValues.points;
       this.survivalPoints = newValues.spentPoints;
@@ -371,7 +399,7 @@ export default {
       this.gritGear = 0;
       this.encumberanceGear = 0;
       this.survivalGear = 0;
-    },
+    }
   }
 };
 </script>
